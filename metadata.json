@@ -1,5 +1,5 @@
 {
-  "name": "Homeland Event",
+  "name": "HomelandEvent",
   "description": "A smart event planning platform that validates equipment compatibility, matches themes, and calculates real-time financial breakdowns including tax and fees.",
   "requestFramePermissions": []
 }
