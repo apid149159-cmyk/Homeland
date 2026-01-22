@@ -31,15 +31,21 @@ npm run preview
 1. Drag and drop the `dist` folder to the Netlify Drop zone.
 
 ### Option C: GitHub Pages
-1. Update `vite.config.ts` to include your repository base URL:
-   ```ts
-   export default defineConfig({
-     base: '/repository-name/', 
-     // ...
-   })
+1. Push code to GitHub.
+2. Configure GitHub Actions to deploy the `dist` folder.
+
+### Option D: Firebase Hosting (Required for .web.app domain) -> **CURRENTLY CONFIGURED**
+1. Install Firebase CLI: `npm install -g firebase-tools`
+2. Login: `firebase login`
+3. Initialize/Link Project:
+   - Create a project named "**Homelandevent**" at [Firebase Console](https://console.firebase.google.com/)
+   - Run `firebase use --add` and select your project.
+4. Deploy:
+   ```bash
+   npm run build
+   firebase deploy
    ```
-2. Push code to GitHub.
-3. Configure GitHub Actions to deploy the `dist` folder.
+   *Note: `vite.config.ts` and `firebase.json` are already configured for this.*
 
 ## 4. Environment Variables
 Ensure your hosting provider has the following environment variables set:
